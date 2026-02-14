@@ -1,6 +1,12 @@
 <?php
 $url = "https://pokeapi.co/api/v2/pokemon/";
-
+/**
+ * Busca información de un Pokémon en la API de PokeAPI.
+ *
+ * @param string $nombre El nombre del Pokémon a buscar.
+ * @param string $url La URL base de la API de Pokémon.
+ * @return array Devuelve un array asociativo con los datos del Pokémon.
+ */
 function buscar($nombre, $url){
     $response = file_get_contents($url . $nombre);
     return json_decode($response, true);
